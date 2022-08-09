@@ -12,6 +12,7 @@
 // downloadURL	https://gitee.com/jares/gitTest/raw/master/script.user.js
 
 // ==/UserScript==
+console.log(111)
 if(self.document.URL.indexOf('http://115.com/?ct=')!=-1){
 	var	callback = function(records){
 		records.map(function(record){
