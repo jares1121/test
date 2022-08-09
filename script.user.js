@@ -3,7 +3,7 @@
 // @authuer		jares
 // @description	苦心人，天不负，卧薪尝胆，三千越甲可吞吴
 // @include		*
-// @version		2016.02.20.1
+// @version		2016.02.20.2
 // @grant		GM_xmlhttpRequest
 // @grant		GM_setClipboard
 // @run-at		document-end
