@@ -1,18 +1,16 @@
 // ==UserScript==
-// @name		名称
-// @authuer		jares
-// @description	苦心人，天不负，卧薪尝胆，三千越甲可吞吴
-// @include		*
-// @version		2016.02.20.2
+// @name		123123
+// @authuer		ted423
+// @description	115网盘下载帮手，能自动帮忙点普通下载，少点一次鼠标，能够批量复制下载链接1123山东省阿萨德
+// @include		http://115.com/?ct=*
+// @version		1.0.2
 // @grant		GM_xmlhttpRequest
 // @grant		GM_setClipboard
 // @run-at		document-end
 // @license		MIT
-// @namespace	https://greasyfork.org/users/846627
-// downloadURL	https://gitee.com/jares/gitTest/raw/master/script.user.js
-
+// @namespace	https://greasyfork.org/users/85
+// downloadURL	https://github.com/jares1121/test/raw/master/index.js
 // ==/UserScript==
-console.log(111)
 if(self.document.URL.indexOf('http://115.com/?ct=')!=-1){
 	var	callback = function(records){
 		records.map(function(record){
