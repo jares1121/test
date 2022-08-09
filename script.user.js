@@ -9,7 +9,8 @@
 // @run-at		document-end
 // @license		MIT
 // @namespace	https://greasyfork.org/users/85
-// downloadURL	https://github.com/jares1121/test/raw/master/index.js
+// downloadURL	https://gitee.com/jares/gitTest/raw/master/script.user.js
+
 // ==/UserScript==
 if(self.document.URL.indexOf('http://115.com/?ct=')!=-1){
 	var	callback = function(records){
