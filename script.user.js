@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name		名称
 // @authuer		jares
-// @description	115网盘下载帮手，能自动帮忙点普通下载，少点一次鼠标，能够批量复制下载链接11212
+// @description	苦心人，天不负，卧薪尝胆，三千越甲可吞吴
 // @include		*
 // @version		2016.02.20.0
 // @grant		GM_xmlhttpRequest
