@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name		123123
 // @authuer		ted423
-// @description	115网盘下载帮手，能自动帮忙点普通下载，少点一次鼠标，能够批量复制下载链接1
+// @description	115网盘下载帮手，能自动帮忙点普通下载，少点一次鼠标，能够批量复制下载链接11212
 // @include		http://115.com/?ct=*
 // @version		2016.02.20.0
 // @grant		GM_xmlhttpRequest
