@@ -1,7 +1,17 @@
+/*
+ * @Author: jares
+ * @Date: 2022-08-10 00:15:57
+ * @LastEditors: jares
+ * @LastEditTime: 2022-08-10 00:18:11
+ * @FilePath: \vue2-studyc:\Users\jares\Desktop\gitTest\index.js
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by jares, All Rights Reserved. 
+ */
 // ==UserScript==
 // @name		123123
 // @authuer		ted423
-// @description	115网盘下载帮手，能自动帮忙点普通下载，少点一次鼠标，能够批量复制下载链接1123山东省阿萨德
+// @description	111
 // @include		http://115.com/?ct=*
 // @version		1.0.2
 // @grant		GM_xmlhttpRequest
