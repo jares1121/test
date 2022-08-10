@@ -2,18 +2,18 @@
  * @Author: jares
  * @Date: 2022-08-10 00:15:57
  * @LastEditors: jares
- * @LastEditTime: 2022-08-10 00:18:11
- * @FilePath: \vue2-studyc:\Users\jares\Desktop\gitTest\index.js
+ * @LastEditTime: 2022-08-10 11:20:26
+ * @FilePath: \项目d:\jares\gitTest\index.js
  * @Description: 
  * 
  * Copyright (c) 2022 by jares, All Rights Reserved. 
  */
 // ==UserScript==
 // @name		123123
-// @authuer		ted423
-// @description	111
+// @authuer		jares
+// @description	111123
 // @include		http://115.com/?ct=*
-// @version		1.0.2
+// @version		1.0.3
 // @grant		GM_xmlhttpRequest
 // @grant		GM_setClipboard
 // @run-at		document-end
@@ -21,6 +21,7 @@
 // @namespace	https://greasyfork.org/users/85
 // downloadURL	https://github.com/jares1121/test/raw/master/index.js
 // ==/UserScript==
+console.log("1.0.3");
 if(self.document.URL.indexOf('http://115.com/?ct=')!=-1){
 	var	callback = function(records){
 		records.map(function(record){
