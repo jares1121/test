@@ -1,4 +1,4 @@
 let arr = [
     {name:'jares'}
 ]
-console.log(arr)
+console.log(arr[0])
