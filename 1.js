@@ -1,1 +1,4 @@
-console.log('是的56阿萨德4165')
+let arr = [
+    {name:'jares'}
+]
+console.log(arr)
