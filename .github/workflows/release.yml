@@ -1,19 +1,29 @@
-name: Create Release
+name: Release
 on:
   push:
-    # 监听标签推送事件
     tags:
-      - '*'
+      - 'v*'
+ 
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.inputs.commit }}
-          fetch-depth: 0  # 获取所有分支和标签
+      - uses: actions/checkout@v2
  
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12
+ 
+      - name: Determine Step Body
+        id: determine_step_body
+        run: |
+          # 假设我们有一个条件判断来决定步骤主体
+          if [ "${{ github.ref }}" == "refs/tags/v1.0.0" ]; then
+            echo "::set-output name=body::Custom release body for v1.0.0"
+          else
+            echo "::set-output name=body::Default release body"
+          fi
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -22,6 +32,4 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
-          body: ${{ github.event.inputs.commit }}
-          draft: false
-          prerelease: false
+          body: ${{ steps.determine_step_body.outputs.body }} # 使用前面步骤中设置的输出作为发布说明
