@@ -23,7 +23,8 @@ jobs:
           release_name: Release ${{ github.ref }}
           body: |
             Changes in this release:
-            - Commit 1
+            - Commit 11
             - Commit 2
+            - ${{ github.event.inputs.commit }}
           draft: false
           prerelease: false
