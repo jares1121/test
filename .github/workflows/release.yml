@@ -22,6 +22,8 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
-          body: ${{ github.event.inputs.commit }}
+          body: |
+            Changes in this release:
+            - ${{ github.event.inputs.commit }}
           draft: false
           prerelease: false
