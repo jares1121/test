@@ -1,31 +1,27 @@
-# File: .github/workflows/release.yml
-name: Release Automation
+name: Create Release
 on:
   push:
-    # 监听标签的推送事件
+    # 监听标签推送事件
     tags:
-      - 'v*'
- 
+      - '*'
 jobs:
-  publish:
+  release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
- 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
         with:
-          node-version: 14
+          ref: ${{ github.event.inputs.commit }}
+          fetch-depth: 0  # 获取所有分支和标签
  
-      - name: Install Dependencies
-        run: npm install
- 
-      - name: Build
-        run: npm run build
- 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: ${{ github.event.inputs.commit }}
+          draft: false
+          prerelease: false
